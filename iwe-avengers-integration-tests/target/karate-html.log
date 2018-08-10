@@ -1,27 +1,25 @@
-22:45:26.870 karate.env system property was: null 
-22:45:27.259 request:
+22:39:16.274 karate.env system property was: null 
+22:39:16.662 request:
 1 > GET https://4uqlp89ak2.execute-api.us-east-1.amazonaws.com/dev/avengers/uigv-hxbj-plsd-qwei
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
 1 > Host: 4uqlp89ak2.execute-api.us-east-1.amazonaws.com
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 
-22:45:28.189 response time in milliseconds: 929
+22:39:17.798 response time in milliseconds: 1136
 1 < 200
 1 < Connection: keep-alive
-1 < Content-Length: 86
+1 < Content-Length: 0
 1 < Content-Type: application/json
-1 < Date: Wed, 08 Aug 2018 01:45:28 GMT
-1 < x-amz-apigw-id: LSCwwFAvIAMFyRw=
-1 < x-amzn-RequestId: ba06f298-9aac-11e8-8623-8579f30d3b86
-{
-    id:"qowi-einr-tund-plms",
-    name:"Iron Man",
-    secretIdentity:"Tony Stark"
-}
+1 < Date: Fri, 10 Aug 2018 01:39:17 GMT
+1 < X-Amzn-Trace-Id: Root=1-5b6cecc5-169768a52bf209bd3b8a40f1;Sampled=0
+1 < x-amz-apigw-id: LYnu1HLLoAMF1vw=
+1 < x-amzn-RequestId: 31e162f9-9c3e-11e8-a0c9-3d05d22601c2
 
-22:45:28.234 karate.env system property was: null 
-22:45:28.240 request:
+
+22:39:17.832 assertion failed: path: $, actual: '', expected: '{"id":"#string","name":"Iron Man","secretIdentity":"Tony Stark"}', reason: not equal
+22:39:17.844 karate.env system property was: null 
+22:39:17.850 request:
 1 > POST https://4uqlp89ak2.execute-api.us-east-1.amazonaws.com/dev/avengers
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
@@ -31,35 +29,60 @@
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 {"name":"Captain America","secretIdentity":"Steve Rogers"}
 
-22:45:28.709 response time in milliseconds: 469
+22:39:18.322 response time in milliseconds: 472
 1 < 201
 1 < Connection: keep-alive
-1 < Content-Length: 26
+1 < Content-Length: 97
 1 < Content-Type: application/json
-1 < Date: Wed, 08 Aug 2018 01:45:28 GMT
-1 < x-amz-apigw-id: LSCw2FSmIAMFtIA=
-1 < x-amzn-RequestId: ba59315d-9aac-11e8-b8da-073412e45025
-{id:'qoec-eunr-tims-plrt'}
+1 < Date: Fri, 10 Aug 2018 01:39:18 GMT
+1 < x-amz-apigw-id: LYnu-FZUIAMFhJw=
+1 < x-amzn-RequestId: 3267aa23-9c3e-11e8-a12f-ef5de6237619
+{
+    id:'qoec-eunr-tims-plrt',
+    name:'Captain America', 
+    secretIdentity: 'Steve Rogers'
+}
 
-22:45:28.719 karate.env system property was: null 
-22:45:28.721 request:
+22:39:18.333 karate.env system property was: null 
+22:39:18.335 request:
+1 > POST https://4uqlp89ak2.execute-api.us-east-1.amazonaws.com/dev/avengers
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 33
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: 4uqlp89ak2.execute-api.us-east-1.amazonaws.com
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+{"secretIdentity":"Steve Rogers"}
+
+22:39:18.835 response time in milliseconds: 500
+1 < 400
+1 < Connection: keep-alive
+1 < Content-Length: 35
+1 < Content-Type: application/json
+1 < Date: Fri, 10 Aug 2018 01:39:18 GMT
+1 < x-amz-apigw-id: LYnvDHw9oAMF5wg=
+1 < x-amzn-RequestId: 32b41c70-9c3e-11e8-8a4e-5d37eea9b814
+{"message": "Invalid request body"}
+
+22:39:18.846 karate.env system property was: null 
+22:39:18.848 request:
 1 > DELETE https://4uqlp89ak2.execute-api.us-east-1.amazonaws.com/dev/avengers/uigv-hxbj-plsd-qwei
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
 1 > Host: 4uqlp89ak2.execute-api.us-east-1.amazonaws.com
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 
-22:45:29.191 response time in milliseconds: 469
+22:39:19.310 response time in milliseconds: 462
 1 < 204
 1 < Connection: keep-alive
 1 < Content-Length: 0
 1 < Content-Type: application/json
-1 < Date: Wed, 08 Aug 2018 01:45:29 GMT
-1 < x-amz-apigw-id: LSCw7G4SIAMFhJw=
-1 < x-amzn-RequestId: baa1d329-9aac-11e8-a9ba-531e44890c08
+1 < Date: Fri, 10 Aug 2018 01:39:19 GMT
+1 < x-amz-apigw-id: LYnvIEjPoAMFzOA=
+1 < x-amzn-RequestId: 32ff2fbd-9c3e-11e8-a8f8-8ff7fa8910f9
 
-22:45:29.200 karate.env system property was: null 
-22:45:29.203 request:
+22:39:19.320 karate.env system property was: null 
+22:39:19.322 request:
 1 > PUT https://4uqlp89ak2.execute-api.us-east-1.amazonaws.com/dev/avengers/uigv-hxbj-plsd-qwei
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
@@ -69,77 +92,43 @@
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 {"name":"Captain America <3","secretIdentity":"Steve Rogers"}
 
-22:45:29.681 response time in milliseconds: 478
+22:39:19.804 response time in milliseconds: 481
 1 < 200
 1 < Connection: keep-alive
-1 < Content-Length: 69
+1 < Content-Length: 99
 1 < Content-Type: application/json
-1 < Date: Wed, 08 Aug 2018 01:45:29 GMT
-1 < x-amz-apigw-id: LSCw_G29IAMFrNw=
-1 < x-amzn-RequestId: baed0dae-9aac-11e8-af1a-6bc55aefd6f2
+1 < Date: Fri, 10 Aug 2018 01:39:19 GMT
+1 < x-amz-apigw-id: LYnvNGJboAMFrgw=
+1 < x-amzn-RequestId: 33490962-9c3e-11e8-a4fa-01f92c7be738
 {
+    id:'uigv-hxbj-plsd-qwei',
     name:'Captain America <3',
     secretIdentity: 'Steve Rogers'
 }
 
-issing Authentication Token"}
+22:39:19.813 karate.env system property was: null 
+22:39:19.815 request:
+1 > PUT https://4uqlp89ak2.execute-api.us-east-1.amazonaws.com/dev/avengers/uigv-hxbj-plsd-qwei
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 33
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: 4uqlp89ak2.execute-api.us-east-1.amazonaws.com
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+{"secretIdentity":"Steve Rogers"}
 
-22:43:44.334 status code was: 403, expected: 200, response time: 468, url: https://4uqlp89ak2.execute-api.us-east-1.amazonaws.com/dev/avengers/uigv-hxbj-plsd-qwei, response: {"message":"Missing Authentication Token"}
-wsstatic.com/main/css/1.0.372/style.css" />
-  <style>
-    .error {
-      text-align: center;
-    }
-    h1.error-code {
-      font-size: 15em;
-      color: #686868;
-    }
-    [data-dropdown="aws-nav-dropdown-lang"] {
-      display: none;
-    }
-  </style>
-  <script>
-    var AWS = {
-      PageSettings: {
-        supportedLanguages: ['en'],
-        defaultLanguage: 'en',
-        logDataSet: 'LIVE:PROD',
-        logInstance: 'PUB',
-        libraCSSPath: '//a0.awsstatic.com/libra-css/css/1.0.167'
-      }
-    };
+22:39:20.292 response time in milliseconds: 476
+1 < 400
+1 < Connection: keep-alive
+1 < Content-Length: 35
+1 < Content-Type: application/json
+1 < Date: Fri, 10 Aug 2018 01:39:20 GMT
+1 < x-amz-apigw-id: LYnvSEP8IAMF2hw=
+1 < x-amzn-RequestId: 3393a73b-9c3e-11e8-afe3-3bcae0f9e512
+{"message": "Invalid request body"}
 
-    var require = {
-      baseUrl: "//a0.awsstatic.com/chrome/js/1.0.401/",
-      paths: {
-        "jquery": "jquery-amd"
-      },
-      deps: ["scripts"],
-      shim: {
-        "scripts": ["jquery"],
-        "forms": ["jquery"],
-        "pricing-table": ["jquery", "scripts"],
-        "plugins/bootstrap.button": ["jquery"],
-        "plugins/bootstrap.collapse": ["jquery"],
-        "plugins/bootstrap.dropdown": ["jquery"],
-        "plugins/bootstrap.popover": ["jquery"],
-        "plugins/bootstrap.tab": ["jquery"],
-        "plugins/bootstrap.tooltip": ["jquery"],
-        "plugins/free-tier": ["jquery", "scripts"],
-        "plugins/jquery.caroufredsel": ["jquery"],
-        "plugins/jquery.fancybox": ["jquery"],
-        "plugins/jwplayer.html5": ["jquery"],
-        "plugins/jwplayer": ["jquery"],
-        "plugins/pbSize": ["jquery"],
-        "plugins/pushstate": ["jquery", "scripts"],
-        "plugins/search-controller": ["jquery"],
-        "plugins/jquery.touchSwipe": ["jquery"]
-      },
-      waitSeconds: 15
-    };
-  </script>
-  <script src="//a0.awsstatic.com/chrome/js/1.0.401/head.2.0.js"></script>
-  <script src="//a0.awsstatic.com/s_code/js/1.0/awshome_s_code.js"></script>
+ url: https://4uqlp89ak2.execute-api.us-east-1.amazonaws.com/dev/avengers/uigv-hxbj-plsd-qwei, response: {"id":"uigv-hxbj-plsd-qwei","name":"Captain America <3","secretIdentity":"Steve Rogers"}
+"></script>
   <script src="//a0.awsstatic.com/target/1.0.96/aws-target-mediator.js"></script>
 </head>
 <body>
