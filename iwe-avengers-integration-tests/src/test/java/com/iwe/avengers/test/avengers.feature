@@ -10,6 +10,12 @@ When method get
 Then status 200
 And match response == {id:'#string', name:'Iron Man', secretIdentity:'Tony Stark'}
 
+Scenario: Avenger not found
+
+Given path 'avengers', 'invalid'
+When method get
+Then status 404
+
 Scenario: Registry a new Avenger
 
 Given path 'avengers'
@@ -31,13 +37,23 @@ Given path 'avengers', 'uigv-hxbj-plsd-qwei'
 When method delete
 Then status 204 # Success with no content status
 
+# Confirm exclusion - com o banco deve ser um GET
+Given path 'avengers', 'uigv-hxbj-plsd-qwei'
+When method delete
+Then status 404
+
 Scenario: Update a Avenger
 
-Given path 'avengers', 'uigv-hxbj-plsd-qwei'
+Given path 'avengers', 'invalid'
 And request {name:'Captain America <3', secretIdentity: 'Steve Rogers'}
 When method put
+Then status 404
+
+Given path 'avengers', 'qwer-tyui-oasd-fghj'
+And request {name:'Feiticeira Escarlate <3', secretIdentity: 'Wanda Maximoff'}
+When method put
 Then status 200
-And  match response == {id:'uigv-hxbj-plsd-qwei', name:'Captain America <3', secretIdentity: 'Steve Rogers'}
+And  match response == {id:'qwer-tyui-oasd-fghj', name:'Feiticeira Escarlate <3', secretIdentity: 'Wanda Maximoff'}
 
 Scenario: Update a Avenger with invalid payload
 
