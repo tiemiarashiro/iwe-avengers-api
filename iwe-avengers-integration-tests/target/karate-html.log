@@ -1,43 +1,43 @@
-22:54:58.692 karate.env system property was: null 
-22:54:59.113 request:
+19:41:15.644 karate.env system property was: null 
+19:41:16.098 request:
 1 > GET https://4uqlp89ak2.execute-api.us-east-1.amazonaws.com/dev/avengers/uigv-hxbj-plsd-qwei
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
 1 > Host: 4uqlp89ak2.execute-api.us-east-1.amazonaws.com
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 
-22:55:00.222 response time in milliseconds: 1109
+19:41:18.204 response time in milliseconds: 2106
 1 < 200
 1 < Connection: keep-alive
 1 < Content-Length: 76
 1 < Content-Type: application/json
-1 < Date: Wed, 15 Aug 2018 01:55:00 GMT
-1 < X-Amzn-Trace-Id: Root=1-5b7387f3-47edec00bf016920647d23e0;Sampled=0
-1 < x-amz-apigw-id: LpIuGFrUoAMFvGA=
-1 < x-amzn-RequestId: 37bea226-a02e-11e8-b7fb-3fde826584ed
+1 < Date: Thu, 16 Aug 2018 22:41:18 GMT
+1 < X-Amzn-Trace-Id: Root=1-5b75fd8e-f86f2a041ae786c2e5903411;Sampled=0
+1 < x-amz-apigw-id: LvSONGwiIAMFhzg=
+1 < x-amzn-RequestId: 7d7a904c-a1a5-11e8-bc8b-c5463b3d556e
 {"id":"uigv-hxbj-plsd-qwei","name":"Iron Man","secretIdentity":"Tony Stark"}
 
-22:55:00.270 karate.env system property was: null 
-22:55:00.270 request:
+19:41:18.252 karate.env system property was: null 
+19:41:18.252 request:
 1 > GET https://4uqlp89ak2.execute-api.us-east-1.amazonaws.com/dev/avengers/invalid
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
 1 > Host: 4uqlp89ak2.execute-api.us-east-1.amazonaws.com
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 
-22:55:00.722 response time in milliseconds: 452
+19:41:18.689 response time in milliseconds: 437
 1 < 404
 1 < Connection: keep-alive
 1 < Content-Length: 318
 1 < Content-Type: application/json
-1 < Date: Wed, 15 Aug 2018 01:55:00 GMT
-1 < X-Amzn-Trace-Id: Root=1-5b7387f4-d64b9c048cb6301a945c3c66;Sampled=0
-1 < x-amz-apigw-id: LpIuOGCsoAMF8Tg=
-1 < x-amzn-RequestId: 382f3e28-a02e-11e8-a2b0-2127d3ac86e3
+1 < Date: Thu, 16 Aug 2018 22:41:18 GMT
+1 < X-Amzn-Trace-Id: Root=1-5b75fd8e-80656886bdb96452de0d8e80;Sampled=0
+1 < x-amz-apigw-id: LvSOSGgHoAMFwjA=
+1 < x-amzn-RequestId: 7dc972eb-a1a5-11e8-a503-75c1ce55cec2
 {"errorMessage":"[NotFound] - Avenger id:invalid not found","errorType":"com.iwe.avenger.lambda.exception.AvengerNotFoundException","stackTrace":["com.iwe.avengers.SearchAvengersHandler.handleRequest(SearchAvengersHandler.java:22)","com.iwe.avengers.SearchAvengersHandler.handleRequest(SearchAvengersHandler.java:1)"]}
 
-22:55:00.722 karate.env system property was: null 
-22:55:00.738 request:
+19:41:18.704 karate.env system property was: null 
+19:41:18.704 request:
 1 > POST https://4uqlp89ak2.execute-api.us-east-1.amazonaws.com/dev/avengers
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
@@ -47,19 +47,19 @@
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 {"name":"Captain America","secretIdentity":"Steve Rogers"}
 
-22:55:01.190 response time in milliseconds: 452
+19:41:19.188 response time in milliseconds: 468
 1 < 201
 1 < Connection: keep-alive
-1 < Content-Length: 68
+1 < Content-Length: 67
 1 < Content-Type: application/json
-1 < Date: Wed, 15 Aug 2018 01:55:01 GMT
-1 < X-Amzn-Trace-Id: Root=1-5b7387f5-fe903e1265887514344ff092;Sampled=0
-1 < x-amz-apigw-id: LpIuSEwroAMF5Sg=
-1 < x-amzn-RequestId: 3875e42e-a02e-11e8-92cf-fd7e4ac1be24
-{"id":"20","name":"Captain America","secretIdentity":"Steve Rogers"}
+1 < Date: Thu, 16 Aug 2018 22:41:19 GMT
+1 < X-Amzn-Trace-Id: Root=1-5b75fd8f-713a51c45dee06e373550442;Sampled=0
+1 < x-amz-apigw-id: LvSOXHK3IAMF-jQ=
+1 < x-amzn-RequestId: 7e11ee21-a1a5-11e8-88ac-abcbc16f33b5
+{"id":"7","name":"Captain America","secretIdentity":"Steve Rogers"}
 
-22:55:01.206 karate.env system property was: null 
-22:55:01.206 request:
+19:41:19.188 karate.env system property was: null 
+19:41:19.188 request:
 1 > POST https://4uqlp89ak2.execute-api.us-east-1.amazonaws.com/dev/avengers
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
@@ -69,38 +69,54 @@
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 {"secretIdentity":"Steve Rogers"}
 
-22:55:01.658 response time in milliseconds: 452
+19:41:19.673 response time in milliseconds: 485
 1 < 400
 1 < Connection: keep-alive
 1 < Content-Length: 35
 1 < Content-Type: application/json
-1 < Date: Wed, 15 Aug 2018 01:55:01 GMT
-1 < x-amz-apigw-id: LpIuXFiFoAMFbUg=
-1 < x-amzn-RequestId: 38bf701a-a02e-11e8-acb4-e7d12db5a786
+1 < Date: Thu, 16 Aug 2018 22:41:19 GMT
+1 < x-amz-apigw-id: LvSOcEt1IAMFdJA=
+1 < x-amzn-RequestId: 7e6034d7-a1a5-11e8-be82-49d9e7dae746
 {"message": "Invalid request body"}
 
-22:55:01.659 karate.env system property was: null 
-22:55:01.659 request:
+19:41:19.706 karate.env system property was: null 
+19:41:19.706 request:
 1 > DELETE https://4uqlp89ak2.execute-api.us-east-1.amazonaws.com/dev/avengers/uigv-hxbj-plsd-qwei
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
 1 > Host: 4uqlp89ak2.execute-api.us-east-1.amazonaws.com
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 
-22:55:02.158 response time in milliseconds: 499
-1 < 404
+19:41:22.702 response time in milliseconds: 2996
+1 < 204
 1 < Connection: keep-alive
-1 < Content-Length: 326
+1 < Content-Length: 0
 1 < Content-Type: application/json
-1 < Date: Wed, 15 Aug 2018 01:55:02 GMT
-1 < X-Amzn-Trace-Id: Root=1-5b7387f6-9d920833e3ff8b67648f7ab0;Sampled=0
-1 < x-amz-apigw-id: LpIucHFFIAMFbkQ=
-1 < x-amzn-RequestId: 3906d942-a02e-11e8-aeeb-71e205afdb09
+1 < Date: Thu, 16 Aug 2018 22:41:22 GMT
+1 < X-Amzn-Trace-Id: Root=1-5b75fd90-3b731b00091b1a005ebe4dc0;Sampled=0
+1 < x-amz-apigw-id: LvSOhEvAoAMFhGQ=
+1 < x-amzn-RequestId: 7eadb92a-a1a5-11e8-9b19-51840f097090
+
+19:41:22.702 request:
+2 > DELETE https://4uqlp89ak2.execute-api.us-east-1.amazonaws.com/dev/avengers/uigv-hxbj-plsd-qwei
+2 > Accept-Encoding: gzip,deflate
+2 > Connection: Keep-Alive
+2 > Host: 4uqlp89ak2.execute-api.us-east-1.amazonaws.com
+2 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+
+19:41:23.437 response time in milliseconds: 735
+2 < 404
+2 < Connection: keep-alive
+2 < Content-Length: 326
+2 < Content-Type: application/json
+2 < Date: Thu, 16 Aug 2018 22:41:23 GMT
+2 < X-Amzn-Trace-Id: Root=1-5b75fd93-1049ce4b9b910fe29190cd91;Sampled=0
+2 < x-amz-apigw-id: LvSO_HpGoAMFbkQ=
+2 < x-amzn-RequestId: 80722511-a1a5-11e8-aeeb-71e205afdb09
 {"errorMessage":"[NotFound] - Avenger id:uigv-hxbj-plsd-qwei not found","errorType":"com.iwe.avenger.lambda.exception.AvengerNotFoundException","stackTrace":["com.iwe.avengers.RemoveAvengerHandler.handleRequest(RemoveAvengerHandler.java:22)","com.iwe.avengers.RemoveAvengerHandler.handleRequest(RemoveAvengerHandler.java:1)"]}
 
-22:55:02.158 status code was: 404, expected: 204, response time: 499, url: https://4uqlp89ak2.execute-api.us-east-1.amazonaws.com/dev/avengers/uigv-hxbj-plsd-qwei, response: {"errorMessage":"[NotFound] - Avenger id:uigv-hxbj-plsd-qwei not found","errorType":"com.iwe.avenger.lambda.exception.AvengerNotFoundException","stackTrace":["com.iwe.avengers.RemoveAvengerHandler.handleRequest(RemoveAvengerHandler.java:22)","com.iwe.avengers.RemoveAvengerHandler.handleRequest(RemoveAvengerHandler.java:1)"]}
-22:55:02.158 karate.env system property was: null 
-22:55:02.174 request:
+19:41:23.453 karate.env system property was: null 
+19:41:23.453 request:
 1 > PUT https://4uqlp89ak2.execute-api.us-east-1.amazonaws.com/dev/avengers/invalid
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
@@ -110,18 +126,18 @@
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 {"name":"Captain America <3","secretIdentity":"Steve Rogers"}
 
-22:55:04.124 response time in milliseconds: 1950
+19:41:24.061 response time in milliseconds: 608
 1 < 404
 1 < Connection: keep-alive
 1 < Content-Length: 318
 1 < Content-Type: application/json
-1 < Date: Wed, 15 Aug 2018 01:55:04 GMT
-1 < X-Amzn-Trace-Id: Root=1-5b7387f6-c2db8e802cbfada0e77e1d40;Sampled=0
-1 < x-amz-apigw-id: LpIuhG08oAMFtBw=
-1 < x-amzn-RequestId: 3950db56-a02e-11e8-ae68-0dd72f1909b7
+1 < Date: Thu, 16 Aug 2018 22:41:24 GMT
+1 < X-Amzn-Trace-Id: Root=1-5b75fd93-6fa22912e46dba1885cc5a5e;Sampled=0
+1 < x-amz-apigw-id: LvSPHG0UoAMF_Dw=
+1 < x-amzn-RequestId: 80ec1049-a1a5-11e8-9c7c-119796348c13
 {"errorMessage":"[NotFound] - Avenger id:invalid not found","errorType":"com.iwe.avenger.lambda.exception.AvengerNotFoundException","stackTrace":["com.iwe.avengers.UpdateAvengersHandler.handleRequest(UpdateAvengersHandler.java:22)","com.iwe.avengers.UpdateAvengersHandler.handleRequest(UpdateAvengersHandler.java:1)"]}
 
-22:55:04.125 request:
+19:41:24.061 request:
 2 > PUT https://4uqlp89ak2.execute-api.us-east-1.amazonaws.com/dev/avengers/qwer-tyui-oasd-fghj
 2 > Accept-Encoding: gzip,deflate
 2 > Connection: Keep-Alive
@@ -131,20 +147,19 @@
 2 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 {"name":"Feiticeira Escarlate <3","secretIdentity":"Wanda Maximoff"}
 
-22:55:05.591 response time in milliseconds: 1466
+19:41:24.515 response time in milliseconds: 454
 2 < 200
 2 < Connection: keep-alive
-2 < Content-Length: 92
+2 < Content-Length: 95
 2 < Content-Type: application/json
-2 < Date: Wed, 15 Aug 2018 01:55:05 GMT
-2 < X-Amzn-Trace-Id: Root=1-5b7387f8-cad0583e0fccaa60acc337a3;Sampled=0
-2 < x-amz-apigw-id: LpIu1GH7oAMF8xQ=
-2 < x-amzn-RequestId: 3a853bcd-a02e-11e8-b90d-792818c98b70
-{"id":"qwer-tyui-oasd-fghj","name":"Feiticeira Escarlate","secretIdentity":"Wanda Maximoff"}
+2 < Date: Thu, 16 Aug 2018 22:41:24 GMT
+2 < X-Amzn-Trace-Id: Root=1-5b75fd94-57f1fbe886e5c3d2feebf9b8;Sampled=0
+2 < x-amz-apigw-id: LvSPNFvcoAMF7dg=
+2 < x-amzn-RequestId: 8141aa07-a1a5-11e8-9e1c-49fd4e419c8e
+{"id":"qwer-tyui-oasd-fghj","name":"Feiticeira Escarlate <3","secretIdentity":"Wanda Maximoff"}
 
-22:55:05.591 assertion failed: path: $.name, actual: 'Feiticeira Escarlate', expected: 'Feiticeira Escarlate <3', reason: not equal
-22:55:05.591 karate.env system property was: null 
-22:55:05.591 request:
+19:41:24.515 karate.env system property was: null 
+19:41:24.515 request:
 1 > PUT https://4uqlp89ak2.execute-api.us-east-1.amazonaws.com/dev/avengers/uigv-hxbj-plsd-qwei
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
@@ -154,23 +169,23 @@
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 {"secretIdentity":"Steve Rogers"}
 
-22:55:06.045 response time in milliseconds: 454
+19:41:24.967 response time in milliseconds: 452
 1 < 400
 1 < Connection: keep-alive
 1 < Content-Length: 35
 1 < Content-Type: application/json
-1 < Date: Wed, 15 Aug 2018 01:55:05 GMT
-1 < x-amz-apigw-id: LpIvDGBPoAMFvGA=
-1 < x-amzn-RequestId: 3b5cd789-a02e-11e8-b7fb-3fde826584ed
+1 < Date: Thu, 16 Aug 2018 22:41:24 GMT
+1 < x-amz-apigw-id: LvSPRGUoIAMFm1A=
+1 < x-amzn-RequestId: 81885005-a1a5-11e8-8e33-93b4d0214980
 {"message": "Invalid request body"}
 
-retIdentity":"Steve Rogers"}
+< x-amz-apigw-id: LvPMgHG-IAMFYWQ=
+1 < x-amzn-RequestId: 9a8aee05-a1a2-11e8-9311-952ebf7d5df8
+{"message": "Invalid request body"}
 
-22:49:27.441 response time in milliseconds: 452
-1 < 400
-1 < Connection: keep-alive
-1 < Content-Length: 35
-1 < Content-Type: application/json
+
+
+-Type: application/json
 1 < Date: Wed, 15 Aug 2018 01:49:27 GMT
 1 < x-amz-apigw-id: LpH6JEG_IAMFYWQ=
 1 < x-amzn-RequestId: 718a2012-a02d-11e8-9311-952ebf7d5df8
