@@ -22,7 +22,7 @@ public class UpdateAvengersHandler implements RequestHandler<Avenger, HandlerRes
 			throw new AvengerNotFoundException("[NotFound] - Avenger id:"+id+" not found");
 		}
 		
-		Avenger updatedAvenger = dao.replace(avenger);
+		Avenger updatedAvenger = dao.update(avenger);
 		
 		final HandlerResponse response = HandlerResponse.builder()
 										.setStatusCode(200)

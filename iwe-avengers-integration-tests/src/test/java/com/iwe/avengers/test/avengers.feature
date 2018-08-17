@@ -3,12 +3,12 @@ Feature: Perform integrated tests on the Avengers registration API
 Background:
 * url 'https://4uqlp89ak2.execute-api.us-east-1.amazonaws.com/dev'
 
-Scenario: Get Avenger by id
-
-Given path 'avengers', 'uigv-hxbj-plsd-qwei'
-When method get
-Then status 200
-And match response == {id:'#string', name:'Iron Man', secretIdentity:'Tony Stark'}
+#Scenario: Get Avenger by id
+#
+#Given path 'avengers', 'uigv-hxbj-plsd-qwei'
+#When method get
+#Then status 200
+#And match response == {id:'#string', name:'Iron Man', secretIdentity:'Tony Stark'}
 
 Scenario: Avenger not found
 
@@ -23,6 +23,14 @@ And request {name:'Captain America', secretIdentity: 'Steve Rogers'} # data to r
 When method post
 Then status 201 # 'Created' status
 And  match response == {id:'#string', name:'Captain America', secretIdentity: 'Steve Rogers'}
+
+# Get the saved avenger by id
+* def savedAvenger = response
+
+Given path 'avengers', savedAvenger.id
+When method get
+Then status 200
+And match $ == savedAvenger
 
 Scenario: Registry a new Avenger with invalid payload
 
@@ -45,7 +53,7 @@ Then status 404
 Scenario: Update a Avenger
 
 Given path 'avengers', 'invalid'
-And request {name:'Captain America <3', secretIdentity: 'Steve Rogers'}
+And request {name:'Feiticeira Escarlate <3', secretIdentity: 'Wanda Maximoff'}
 When method put
 Then status 404
 
