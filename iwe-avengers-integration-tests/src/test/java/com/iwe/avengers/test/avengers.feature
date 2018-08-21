@@ -10,6 +10,12 @@ Background:
 #Then status 200
 #And match response == {id:'#string', name:'Iron Man', secretIdentity:'Tony Stark'}
 
+Scenario: Access endpoint without authorization token
+
+Given path 'avengers', 'anyid'
+When method get
+Then status 401
+
 Scenario: Avenger not found
 
 Given path 'avengers', 'invalid'
