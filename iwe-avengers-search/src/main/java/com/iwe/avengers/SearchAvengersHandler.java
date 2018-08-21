@@ -11,7 +11,7 @@ import com.iwe.avengers.dao.AvengerDAO;
 
 public class SearchAvengersHandler implements RequestHandler<Avenger, HandlerResponse> {
 
-	private AvengerDAO dao = new AvengerDAO();
+	private AvengerDAO dao = AvengerDAO.getInstance();
 	
 	@Override
 	public HandlerResponse handleRequest(final Avenger avenger, final Context context) {

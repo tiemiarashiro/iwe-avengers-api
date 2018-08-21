@@ -8,14 +8,14 @@ import com.iwe.avengers.dao.AvengerDAO;
 
 public class CreateAvengersHandler implements RequestHandler<Avenger, HandlerResponse> {
 	
-	private AvengerDAO dao = new AvengerDAO();
+	private AvengerDAO dao = AvengerDAO.getInstance();
 
 	@Override
 	public HandlerResponse handleRequest(final Avenger newAvenger, final Context context) {
 
 		context.getLogger().log("[#] - Initiate a new Avenger registration");
 
-		final Avenger createdAvenger = dao.create(newAvenger);
+		final Avenger createdAvenger = dao.save(newAvenger);
 		
 		final HandlerResponse response = HandlerResponse.builder()
 										.setStatusCode(201)
